@@ -1,0 +1,36 @@
+@mixin font($weight, $size, $height: 100%, $spacing: 0px, $color: black) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
+}
+
+@mixin flex($gap: 0px, $justify: center, $align: center, $flex-direction: row) {
+    display: flex;
+    gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex-direction;
+}
+
+@mixin line {
+    position: absolute;
+    top: 25px;
+    left: -103px;
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 76px;
+    background-color: black;
+}
+
+@mixin button($color, $bg-color) {
+    border-radius: 100px;
+    padding: 16px 32px;
+    width: 175px;
+    height: 56px;
+    @include font(700, 16);
+    color: $color;
+    background-color: $bg-color;
+}

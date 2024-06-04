@@ -1,0 +1,27 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+body {
+    font-family: var(--font-family);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1 {
+    @include font(700, 80px, 120%, -0.04em, inherit);
+}
+h2 {
+    @include font(600, 56px, 120%, -0.04em, inherit);
+}
+h3 {
+    @include font(500, 40px, 130%, -0.03em, inherit);
+}
+h4 {
+    @include font(600, 32px, 131%, -0.03em, inherit);
+}
+h5 {
+    @include font(600, 24px, 142%, 0px, inherit);
+}
+h6 {
+    @include font(500, 18px, 178%, 0px, #7e8492);
+}
