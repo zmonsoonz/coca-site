@@ -1,4 +1,4 @@
-@import "_globals.scss", "_mixins.scss", "_variables.scss", "_fonts.scss";
+@import "globals", "mixins", "variables", "fonts", "normalize";
 
 .container {
     max-width: 1200px;
@@ -211,6 +211,30 @@
     &__text {
         display: grid;
         grid-template-columns: 772px auto;
+    }
+}
+
+.partners {
+    padding: 246px 0;
+    color:  var(--neutral-100);
+    @include flex(30px);
+
+    &__text {
+        @include flex(16px, start, start, column);
+        width: 323px;
+    }
+
+    &__logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 30px;
+
+        &-logo {
+            width: 160px;
+            height: 90px;
+            @include flex();
+        }
     }
 }
 
