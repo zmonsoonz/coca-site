@@ -1,4 +1,4 @@
-@import "_globals.scss", "_mixins.scss", "_variables.scss";
+@import "_globals.scss", "_mixins.scss", "_variables.scss", "_fonts.scss";
 
 .container {
     max-width: 1200px;
@@ -110,14 +110,14 @@
             & span.green {
                 @include font(600, 14px, 143%, 0px, #60d39c);
                 &::before {
-                    content: url(../images/up.png);
+                    content: url(../assets/images/up.png);
                 }
             }
 
             & span.red {
                 @include font(600, 14px, 143%, 0px, #e35454);
                 &::before {
-                    content: url(../images/down.png);
+                    content: url(../assets/images/down.png);
                 }
             }
         }
@@ -160,9 +160,6 @@
 .features {
     @include flex(58px);
     padding: 160px 0px;
-    &__image {
-
-    }
     &__text {
         color: var(--neutral-100);
         
