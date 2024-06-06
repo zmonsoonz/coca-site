@@ -432,3 +432,77 @@
         }
     }
 }
+
+.footer {
+    padding-top: 160px;
+    color:  var(--neutral-100);
+    @include flex(128px, center, center, column);
+
+    &__text {
+        display: grid;
+        grid-template-columns: 720px auto;
+        grid-template-rows: 77px 102px;
+        gap: 32px 303px;
+
+        h5 {
+            position: relative;
+            width: 543px;
+            margin-left: 103px;
+            &::before {
+                @include line;
+            }
+        }
+
+        button {
+            @include button(white,  var(--neutral-100));
+            grid-row: span 2;
+            align-self: center;
+        }
+    }
+
+    &__bottom {
+        @include flex(144px);
+
+        &__text {
+            @include flex(18px, start, start, column);
+
+            &__logo {
+                @include flex(12px, start, center);
+            }
+
+            &-slogan {
+                @include font(500, 16px, 162%, 0px, var(--neutral-100));
+                width: 292px;
+            }
+        }
+        &__links {
+            display: grid;
+            width: 764px;
+            height: 192px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows:repeat(5, 1fr);
+            @include font(400, 16px, 150%);
+            @for $i from 1 to 5 {
+                div:nth-child(#{$i}) {
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+    &__copyright {
+        text-align: center;
+        &__line {
+            margin-top: -49px;
+            background-color: var(--neutral-40);
+            width: 1200px;
+            height: 1px;
+        }
+        span {
+            display: inline-block;
+            margin-top: 46px;
+            margin-bottom: 59px;
+            @include font(400, 16px, 150%, 0px, var(--neutral-50));
+        }
+    }
+}
