@@ -9,7 +9,7 @@
     background-color: var(--neutral-10);
     padding-top: 26px;
     height: 114px;
-
+    @include font(500, 16px, 162%);
     &__logo {
         @include flex(12px, center, center);
     }
@@ -25,7 +25,7 @@
             content: "";
             display: block;
             width: 102px;
-            height: 2px;
+            height: 2px;;
             background-color: black;
         }
     }
@@ -37,7 +37,7 @@
     gap: 100px;
     padding-bottom: 138px;
     &__text {
-        margin-top: 87px;
+        margin-top: 100px;
     }
     h4 {
         position: relative;
@@ -52,6 +52,7 @@
     input {
         width: 280px;
         height: 47px;
+        margin-left: 16px;
         border: none;
         border-bottom: 1px solid #ced1d8;
         background-color: transparent;
@@ -72,23 +73,23 @@
         width: 419px;
         height: 346px;
         box-shadow: 20px 40px 80px 0 rgba(89, 96, 135, 0.12);
+        position: relative;
+        &__customer {
+            position: absolute;
+            z-index: 2;
+            @include font(700, 16px, 150%, -0.03em);
+            @include flex(10px, center, start, column);
+            background-color: white;
+            top: -50px;
+            right: -130px;
+            border-radius: 8px;
+            padding: 16px 18px;
+            width: 213px;
+            height: 220px;
+            box-shadow: 20px 40px 80px 0 rgba(45, 51, 81, 0.12);
+        }
     }
-    &__customer {
-        position: absolute;
-        z-index: 2;
-        @include font(700, 16px, 150%, -0.03em);
-        @include flex(10px, center, start, column);
-        background-color: white;
-        // top: 225px;
-        // right: 275px;
-        top: 25vh;
-        right: 35vh;
-        border-radius: 8px;
-        padding: 16px 18px;
-        width: 213px;
-        height: 220px;
-        box-shadow: 20px 40px 80px 0 rgba(45, 51, 81, 0.12);
-    }
+    
     &__statistics {
         margin-top: 29px;
         border-radius: 8px;
@@ -162,6 +163,83 @@
 .features {
     @include flex(58px);
     padding: 160px 0px;
+    &__image {
+        position: relative;
+    }
+    &__statistic {
+        position: absolute;
+        width: 290px;
+        height: 298px;
+        bottom: 40px;
+        right: 36px;
+        background-color: white;
+        padding: 17px;
+        &__head {
+            @include font(600, 16px, 150%, 0px, var(--neutral-100));
+            @include flex(0px, space-between);
+            margin-bottom: 19px;
+        }
+        &__items {
+            @include flex(45px, center, center, column);
+
+            &-item {
+                color: var(--neutral-60);
+                display: grid;
+                grid-template-areas: "first second" "first third" "first fourth";
+                gap: 0px 26px;
+                
+                &:first-child {
+                    position: relative;
+
+                    .line {
+                        position: absolute;
+                        width: 255px;
+                        height: 0.73px;
+                        top: 110px;
+                        background-color: var(--neutral-30);
+                    }
+                }
+                img {
+                    grid-area: first;
+                }
+
+                h6 {
+                    grid-area: second;
+                    @include font(500, 10px, 150%, 0px, var(--neutral-60));
+                }
+
+                .item-change {
+                    grid-area: third;
+                    @include flex(0px, space-between);
+                    @include font(700, 23px, 120%, 0px, var(--neutral-100));
+
+                    span {
+                        @include font(500, 10px, 150%, 0px, var(--neutral-100));
+                    }
+
+                    .income {
+                        &::before {
+                            content: url(../assets/images/income.png);
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .expense {
+                        &::before {
+                            content: url(../assets/images/expense.png);
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                > span {
+                    grid-area: fourth;
+                    width: 135px;
+                    @include font(400, 8px, 100%, 0px, var(--neutral-60));
+                }
+            }
+        }
+    }
     &__text {
         color: var(--neutral-100);
         
@@ -351,7 +429,7 @@
 .testimonials {
     color:  var(--neutral-100);
     @include flex(112px, end, end, column);
-
+    padding-bottom: 160px;
     &__text {
         h2 {
             width: 530px;
@@ -434,7 +512,7 @@
 }
 
 .footer {
-    padding-top: 160px;
+    padding-top: 112px;
     color:  var(--neutral-100);
     @include flex(128px, center, center, column);
 
@@ -443,6 +521,10 @@
         grid-template-columns: 720px auto;
         grid-template-rows: 77px 102px;
         gap: 32px 303px;
+
+        h2 {
+            @include font(600, 64px, 120%);
+        }
 
         h5 {
             position: relative;
@@ -481,6 +563,7 @@
             height: 192px;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows:repeat(5, 1fr);
+            row-gap: 16px;
             @include font(400, 16px, 150%);
             @for $i from 1 to 5 {
                 div:nth-child(#{$i}) {
@@ -504,5 +587,16 @@
             margin-bottom: 59px;
             @include font(400, 16px, 150%, 0px, var(--neutral-50));
         }
+    }
+}
+
+.try {
+    transition: 0.3s;
+    &:hover {
+        background-color: var(--neutral-70);
+    }
+    &:active {
+        background-color: var(--neutral-80);
+        transition: 0.1s;
     }
 }

@@ -25,3 +25,7 @@ h5 {
 h6 {
     @include font(500, 18px, 178%, 0px, #7e8492);
 }
+
+button {
+    cursor: pointer;
+}

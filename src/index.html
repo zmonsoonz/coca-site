@@ -9,10 +9,10 @@
 </head>
 <body>
     <header class="header container">
-        <div class="header__logo">
+        <a href="#" class="header__logo">
             <img src="./assets/images/logo.png" alt="logo"/>
             <img src="./assets/images/coca.png" alt="coca"/>
-        </div>
+        </a>
         <nav class="header__navigation">
             <a class="header__navigation-item" href="#">Home</a>
             <a class="header__navigation-item" href="#">About</a>
@@ -27,7 +27,7 @@
             <h4>When it comes to interactive marketing, we've got you covered.
                 Be where the world is going</h4>
             <input placeholder="Enter your email" name="email"/>
-            <button type="submit">
+            <button class="try" type="submit">
                 Try for free
             </button>
         </div>
@@ -35,10 +35,10 @@
             <div class="main__sales_report">
                 <span>Sales Report</span>
                 <img src="./assets/images/sales_report.png" alt="sales"/>
-            </div>
-            <div class="main__customer">
-                <span>Customer Growth</span>
-                <img src="./assets/images/customer_growth.png" alt="customer"/>
+                <div class="main__sales_report__customer">
+                    <span>Customer Growth</span>
+                    <img src="./assets/images/customer_growth.png" alt="customer"/>
+                </div>
             </div>
             <div class="main__statistics">
                 <div class="main__statistics_item">
@@ -99,6 +99,29 @@
         <div class="features__image">
             <img src="./assets/images/features.png" alt="features"/>
             <div class="features__statistic">
+                <div class="features__statistic__head">
+                    <span>Statistic</span>
+                    <img src="./assets/images/features_statistic_dots.png" alt="dots">
+                </div>
+                <ul class="features__statistic__items">
+                    <li class="features__statistic__items-item">
+                        <img src="./assets/images/features_statistic_income.png" alt="diagramm">
+                        <h6>Total Income</h6>
+                        <div class="item-change">
+                            $7.020<span class="income">15%</span>
+                        </div>
+                        <span>Your <strong>Income</strong> of this month compared to last month</span>
+                        <div class="line"></div>
+                    </li>
+                    <li class="features__statistic__items-item">
+                        <img src="./assets/images/features_statistic_expense.png" alt="diagramm">
+                        <h6>Total Expense</h6>
+                        <div class="item-change">
+                            $2.150<span class="expense">10%</span>
+                        </div>
+                        <span>Your <strong>Expance</strong> of this month compared to last month</span>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="features__text">
@@ -274,17 +297,17 @@
     <footer class="footer container">
         <div class="footer__text">
             <h2>Think beyond the wave</h2>
-            <button class="footer__text-btn">Try for free</button>
+            <button class="footer__text-btn try">Try for free</button>
             <h5>Ask about Sans products, pricing, 
                 implementation, or anything else. Our 
                 highly trained reps are standing by, ready to help</h5>
         </div>
         <div class="footer__bottom">
             <div class="footer__bottom__text">
-                <div class="footer__bottom__text__logo">
+                <a href="#" class="footer__bottom__text__logo">
                     <img src="./assets/images/logo.png" alt="logo"/>
                     <img src="./assets/images/coca.png" alt="coca"/>
-                </div>
+                </a>
                 <div class="footer__bottom__text-slogan">
                     We built an elegant solution. 
                     Our team created a fully integrated sales 
@@ -296,22 +319,22 @@
                 <div>Product</div>
                 <div>Discover</div>
                 <div>Help Center</div>
-                <div>About</div>
-                <div>Sales Software</div>
-                <div>CRM Comparision</div>
-                <div>Community</div>
-                <div>Pricing</div>
-                <div>Marketplace</div>
-                <div>Partner Program</div>
-                <div>Knowledge Base</div>
-                <div>Jobs</div>
-                <div>Terms & Conditions</div>
-                <div>What is CRM</div>
-                <div>Academy</div>
-                <div>Blog</div>
-                <div>Privacy Policy</div>
-                <div>Resource</div>
-                <div>Support</div>
+                <a href="#">About</a>
+                <a href="#">Sales Software</a>
+                <a href="#">CRM Comparision</a>
+                <a href="#">Community</a>
+                <a href="#">Pricing</a>
+                <a href="#">Marketplace</a>
+                <a href="#">Partner Program</a>
+                <a href="#">Knowledge Base</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">What is CRM</a>
+                <a href="#">Academy</a>
+                <a href="#">Blog</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Resource</a>
+                <a href="#">Support</a>
             </div>
         </div>
         <div class="footer__copyright">
